@@ -1,0 +1,32 @@
+create database employeeRelation;
+use employeeRelation;
+create table employee(
+	Emp_ID VARCHAR(10) PRIMATY KEY,
+	Emp_Name VARCHAR(50),
+	DoB VARCHAR(50),
+	Department VARCHAR(50),
+    Designation VARCHAR(50),
+    DoJ VARCHAR(50),
+    Salary DECIMAL(10, 2)
+);
+
+INSERT INTO Employee (Emp_ID, Emp_Name, DoB, Department, Designation, DoJ, Salary) VALUES
+    -> ('F110', 'Sam', '1980-06-15', 'Bio-Science', 'Professor', '2009-04-12', 45000);
+
+
+SELECT * FROM Employee WHERE Department = 'Computer Science';
+
+SELECT * FROM Employee WHERE DoJ > '2005-06-10';
+
+SELECT * FROM Employee WHERE Emp_Name BETWEEN 'A%' AND 'L%';
+
+SELECT * FROM Employee WHERE Salary > 30000;
+
+SELECT Emp_Name, Department FROM Employee WHERE Salary BETWEEN 20000 AND 40000;
+
+SELECT * FROM Employee WHERE Department = 'Computer Science' AND Salary > 30000;
+
+
+
+
+
